@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity">
+
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/my_navigation"
+        android:layout_above="@+id/bottom_navigation"/>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3665001246595939/9950335308">
+    </com.google.android.gms.ads.AdView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:backgroundTint="@color/app_blue_dark"
+        android:layout_alignParentBottom="true"
+        app:itemIconSize="20dp"
+        android:background="?android:attr/windowBackground"
+        app:itemBackground="@color/app_blue_dark"
+        app:itemIconTint="@color/text_color"
+        app:itemTextAppearanceInactive="@color/black"
+        app:itemTextAppearanceActive="@color/white"
+        app:menu="@menu/nav_menu"
+        />
+
+</RelativeLayout>
+</layout>

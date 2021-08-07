@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/dayFragment"
+        android:icon="@drawable/ic_calendar_today"
+        android:title="Day"/>
+
+
+    <item android:id="@+id/statisticsFragment"
+        android:icon="@drawable/ic_month"
+        android:title="Month"/>
+
+</menu>

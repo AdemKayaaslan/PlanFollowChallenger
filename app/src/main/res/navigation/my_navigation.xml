@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/dayFragment">
+
+    <fragment
+        android:id="@+id/dayFragment"
+        android:name="com.mustafaademkayaaslan.planfollowchallenger.view.DayFragment"
+        android:label="@string/app_name">
+        <action
+            android:id="@+id/action_dayFragment_to_weekFragment"
+            app:destination="@id/weekFragment" />
+        <action
+            android:id="@+id/action_dayFragment_to_statisticsFragment"
+            app:destination="@id/statisticsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/weekFragment"
+        android:name="com.mustafaademkayaaslan.planfollowchallenger.view.WeekFragment"
+        android:label="WeekFragment" >
+        <action
+            android:id="@+id/action_weekFragment_to_statisticsFragment"
+            app:destination="@id/statisticsFragment" />
+        <action
+            android:id="@+id/action_weekFragment_to_dayFragment"
+            app:destination="@id/dayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/statisticsFragment"
+        android:name="com.mustafaademkayaaslan.planfollowchallenger.view.StatisticsFragment"
+        android:label="@string/app_name">
+        <action
+            android:id="@+id/action_statisticsFragment_to_weekFragment"
+            app:destination="@id/weekFragment" />
+        <action
+            android:id="@+id/action_statisticsFragment_to_dayFragment"
+            app:destination="@id/dayFragment" />
+    </fragment>
+</navigation>
